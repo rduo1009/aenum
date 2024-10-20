@@ -76,8 +76,8 @@ except NameError:
 baseint = baseinteger
 
 try:
-    NoneType
-except NameError:
+    NoneType = __builtins__.NoneType
+except AttributeError:
     NoneType = type(None)
 
 class _Addendum(object):
